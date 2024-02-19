@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    opacity: 0; /* Atur opasitas awal menjadi 0 */
+    animation: fadeIn 2s forwards; /* Animasi muncul dari atas dalam 2 detik */
+}
+
+ul {
+    list-style-type: none;
+    margin: 40px 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin-bottom: 20px;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Bayangan putih */
+    animation: blink 1s 1; /* Animasi kedip satu kali dalam 2 detik */
+}
+
+ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-20px); /* Mulai dari posisi 20px di atas */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
